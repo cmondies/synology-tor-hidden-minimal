@@ -12,6 +12,7 @@ EXPOSE 8080
 
 RUN rm /var/cache/apk/*
 
+ADD ./index.html /var/www/localhost/htdocs/index.html
 ADD ./torrc /etc/tor/torrc
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
