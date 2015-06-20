@@ -20,6 +20,8 @@ VOLUME /.tor
 # Generate a random nickname for the relay
 RUN echo "Nickname $(head -c 19 /dev/urandom  | sha1sum | cut -c1-19)" >> /etc/tor/torrc
 
+CMD mkdir /var/lib/tor/hidden-service
+
 USER www
 CMD /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf
 
