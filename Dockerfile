@@ -30,5 +30,5 @@ USER tor
 CMD /usr/bin/tor -f /etc/tor/torrc
 
 RUN	echo "Your hostname:"
-RUN	cat /var/lib/tor/hidden_service/hostname
+RUN	less /var/lib/tor/hidden_service/hostname
 
