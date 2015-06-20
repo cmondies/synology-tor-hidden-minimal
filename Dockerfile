@@ -24,10 +24,9 @@ CMD mkdir /var/lib/tor/hidden-service
 
 #USER www
 #CMD /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf
-CMD /etc/init.d/lighttpd start
+#CMD /etc/init.d/lighttpd start
 
-USER tor
-CMD /usr/bin/tor -f /etc/tor/torrc
+#USER tor
+#CMD /usr/bin/tor -f /etc/tor/torrc
 
-CMD	less /var/lib/tor/hidden_service/hostname
-
+CMD ["/etc/init.d/lighttpd start", "/usr/bin/tor -f /etc/tor/torrc]
