@@ -29,6 +29,5 @@ CMD /etc/init.d/lighttpd start
 USER tor
 CMD /usr/bin/tor -f /etc/tor/torrc
 
-RUN	echo "Your hostname:"
-RUN	less /var/lib/tor/hidden_service/hostname
+CMD	less /var/lib/tor/hidden_service/hostname
 
