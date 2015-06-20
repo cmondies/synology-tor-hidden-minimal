@@ -22,7 +22,7 @@ RUN echo "Nickname $(head -c 19 /dev/urandom  | sha1sum | cut -c1-19)" >> /etc/t
 
 CMD mkdir /var/lib/tor/hidden-service
 
-USER www
+#USER www
 CMD /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf
 
 
