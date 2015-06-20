@@ -19,5 +19,8 @@ ExitPolicy reject *:*
 #Contact
 ContactInfo changeme@localhost
 
+## The directory for keeping all the keys/etc
+DataDirectory /var/lib/tor
+
 HiddenServicePort 80 127.0.0.1:80
 HiddenServiceDir /var/lib/tor/hidden-service
