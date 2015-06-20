@@ -29,4 +29,4 @@ CMD mkdir /var/lib/tor/hidden-service
 #USER tor
 #CMD /usr/bin/tor -f /etc/tor/torrc
 
-CMD ["/etc/init.d/lighttpd start", "/usr/bin/tor -f /etc/tor/torrc"]
+CMD ["/usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf", "/usr/bin/tor -f /etc/tor/torrc"]
