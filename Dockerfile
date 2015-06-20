@@ -22,11 +22,11 @@ RUN echo "Nickname $(head -c 19 /dev/urandom  | sha1sum | cut -c1-19)" >> /etc/t
 
 CMD mkdir /var/lib/tor/hidden-service
 
-#USER www
-#CMD /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf
-#CMD /etc/init.d/lighttpd start
+USER www
+CMD /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf
 
-USER tor
-CMD /usr/bin/tor -f /etc/tor/torrc
+
+#USER tor
+#CMD /usr/bin/tor -f /etc/tor/torrc
 
 #CMD ["/usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf", "/usr/bin/tor -f /etc/tor/torrc"]
