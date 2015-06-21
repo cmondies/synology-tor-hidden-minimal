@@ -21,8 +21,8 @@ RUN echo "Nickname $(head -c 19 /dev/urandom  | sha1sum | cut -c1-19)" >> /etc/t
 CMD mkdir /var/lib/tor/hidden-service
 ADD ./hostname.sh /hostname.sh
 
-USER tor
-CMD /usr/bin/tor -f /etc/tor/torrc
+#USER tor
+#CMD /usr/bin/tor -f /etc/tor/torrc
 
-#USER root
-#CMD /bin/sh /hostname.sh
+ADD ./startup.sh /startup.sh
+ENTRYPOINT /startup.sh
