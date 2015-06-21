@@ -1,2 +1,2 @@
 #!/bin/sh
-service tor start
+/usr/bin/tor -f /etc/tor/torrc
