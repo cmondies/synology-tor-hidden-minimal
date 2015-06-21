@@ -23,5 +23,5 @@ ContactInfo changeme@localhost
 DataDirectory /var/lib/tor
 
 HiddenServiceDir /var/lib/tor/hidden-service
-HiddenServicePort 80 192.168.1.201:80
+HiddenServicePort 80 192.168.1.201:8081
 
