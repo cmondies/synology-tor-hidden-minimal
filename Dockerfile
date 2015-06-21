@@ -24,5 +24,5 @@ ADD ./hostname.sh /hostname.sh
 USER tor
 CMD /usr/bin/tor -f /etc/tor/torrc
 
-USER root
-CMD /bin/sh /hostname.sh
+#USER root
+#CMD /bin/sh /hostname.sh
