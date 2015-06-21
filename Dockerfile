@@ -22,6 +22,3 @@ CMD mkdir /var/lib/tor/hidden-service
 
 USER tor
 CMD /usr/bin/tor -f /etc/tor/torrc
-
-CMD sleep 30
-CMD cat /var/lib/tor/hidden_service/hostname
