@@ -24,5 +24,5 @@ ADD ./hostname.sh /etc/tor/hostname.sh
 USER tor
 CMD /usr/bin/tor -f /etc/tor/torrc
 
-USER root
-CMD /etc/tor/hostname.sh
+ENTRYPOINT /etc/tor/hostname.sh
+
