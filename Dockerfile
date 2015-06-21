@@ -19,10 +19,10 @@ VOLUME /.tor
 RUN echo "Nickname $(head -c 19 /dev/urandom  | sha1sum | cut -c1-19)" >> /etc/tor/torrc
 
 CMD mkdir /var/lib/tor/hidden-service
-ADD ./hostname.sh /etc/tor/hostname.sh
+ADD ./hostname.sh /hostname.sh
 
 USER tor
 CMD /usr/bin/tor -f /etc/tor/torrc
 
-ENTRYPOINT /etc/tor/hostname.sh
+ENTRYPOINT /hostname.sh
 
