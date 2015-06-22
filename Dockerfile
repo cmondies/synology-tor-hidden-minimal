@@ -25,3 +25,4 @@ CMD mkdir /var/lib/tor/hidden-service
 
 ADD ./startup.sh /startup.sh
 ENTRYPOINT /startup.sh
+CMD ["/run.sh"]
