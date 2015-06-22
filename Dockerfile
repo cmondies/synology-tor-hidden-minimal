@@ -23,6 +23,6 @@ CMD mkdir /var/lib/tor/hidden-service
 #USER tor
 #CMD /usr/bin/tor -f /etc/tor/torrc
 
-ADD ./startup.sh /startup.sh
-ENTRYPOINT /startup.sh
+ADD ./run.sh /run.sh
+USER root
 CMD ["/run.sh"]
