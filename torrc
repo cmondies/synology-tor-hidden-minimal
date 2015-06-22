@@ -11,6 +11,8 @@ SocksPolicy reject *
 ORPort 9001
 ExitRelay 1
 
+RunAsDaemon 1
+
 DirPort 8080
 
 ExitPolicy accept *:80        # HTTP
