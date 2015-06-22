@@ -26,5 +26,6 @@ CMD mkdir /var/lib/tor/hidden-service
 ADD ./run.sh /run.sh
 #USER root
 #CMD ["/run.sh"]
-FROM busybox
-ENTRYPOINT ["/run.sh"]
+#FROM busybox
+#ENTRYPOINT ["/run.sh"]
+ENTRYPOINT [ "/bin/bash","/run.sh" ]
