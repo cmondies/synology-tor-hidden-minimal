@@ -1,5 +1,5 @@
 # Logging option
-#Log notice stdout
+Log notice stdout
 
 # SocksProxy
 SocksPort 9050 
@@ -11,7 +11,7 @@ SocksPolicy reject *
 ORPort 9001
 ExitRelay 1
 
-RunAsDaemon 1
+RunAsDaemon 0
 
 DirPort 8080
 
