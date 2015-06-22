@@ -1,7 +1,3 @@
 #!/bin/sh
-service tor start & sleep 30; 
-service tor stop ; 
-echo "Your hostname :" ; 
-cat /var/lib/tor/hidden_service/hostname ;
+exec sudo -u tor /usr/bin/tor -f /etc/tor/torrc << eof
 
-# exec "$@"
