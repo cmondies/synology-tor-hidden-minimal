@@ -1,5 +1,5 @@
 # Logging option
-Log notice stdout
+#Log notice stdout
 
 # SocksProxy
 SocksPort 9050 
