@@ -14,6 +14,7 @@ RUN rm /var/cache/apk/*
 
 ADD ./torrc /etc/tor/torrc
 ADD supervisord.conf /etc/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
 
