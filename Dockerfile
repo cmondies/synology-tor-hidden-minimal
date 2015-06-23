@@ -13,7 +13,7 @@ EXPOSE 8080
 RUN rm /var/cache/apk/*
 
 ADD ./torrc /etc/tor/torrc
-ADD supervisord.conf /etc/supervisord.conf
+#ADD supervisord.conf /etc/supervisord.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
@@ -32,4 +32,5 @@ USER root
 #ENTRYPOINT ["/usr/bin/supervisord"]
 #ENTRYPOINT ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
 
-CMD ["/usr/bin/supervisord"]
+#CMD ["/usr/bin/supervisord"]
+CMD ["/run.sh"]
