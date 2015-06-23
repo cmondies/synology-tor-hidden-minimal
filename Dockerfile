@@ -17,6 +17,7 @@ ADD ./torrc /etc/tor/torrc
 #ADD supervisord.conf /etc/supervisord.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD ./lighttpd.conf /etc/lighttpd/lighttpd.conf
+ADD ./hostname.sh /hostname.sh
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
 
