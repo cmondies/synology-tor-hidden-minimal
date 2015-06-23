@@ -28,9 +28,9 @@ CMD mkdir /var/lib/tor/hidden-service
 
 ADD ./run.sh /run.sh
 USER root
-#ENTRYPOINT [ "/bin/bash","/run.sh" ]
+ENTRYPOINT [ "/bin/bash","/run.sh" ]
 #ENTRYPOINT ["/usr/bin/supervisord"]
 #ENTRYPOINT ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
 
 #CMD ["/usr/bin/supervisord"]
-CMD ["/run.sh"]
+#CMD ["/run.sh"]
