@@ -1,7 +1,6 @@
 # Logging option
 Log notice stdout
 #Log notice /var/log/tor.log
-RunAsDemon 0
 
 # SocksProxy
 SocksPort 9050 
