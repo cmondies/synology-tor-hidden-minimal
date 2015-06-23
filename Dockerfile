@@ -29,5 +29,6 @@ ADD ./run.sh /run.sh
 USER root
 #ENTRYPOINT [ "/bin/bash","/run.sh" ]
 #ENTRYPOINT ["/usr/bin/supervisord"]
-CMD ["/usr/bin/supervisord -c /etc/supervisord.conf"]
 #ENTRYPOINT ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
+
+CMD ["/usr/bin/supervisord"]
