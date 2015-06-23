@@ -1,6 +1,6 @@
 FROM alpine:latest
 RUN apk update
-RUN apk add bash sudo lighttpd supervisor
+RUN apk add bash lighttpd supervisor
 # Alpine Linux package management : http://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management
 # http://dl-4.alpinelinux.org/alpine/edge/testing/x86_64/
 RUN apk add tor --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
