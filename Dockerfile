@@ -14,9 +14,10 @@ EXPOSE 8081
 RUN rm /var/cache/apk/*
 
 ADD ./torrc /etc/tor/torrc
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD ./lighttpd.conf /etc/lighttpd/lighttpd.conf
 ADD ./hostname.sh /hostname.sh
+ADD ./index.html /var/www/index.html
 
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
