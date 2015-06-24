@@ -3,19 +3,20 @@ Log notice stdout
 #Log notice /var/log/tor.log
 
 # SocksProxy
-SocksPort 9050 
-SocksBindAddress 0.0.0.0 
-SocksPolicy accept 192.168.1.0/24
-SocksPolicy reject *
+# SocksPort 9050 
+# SocksBindAddress 0.0.0.0 
+# SocksPolicy accept 192.168.1.0/24
+# SocksPolicy reject *
+SocksPort 0
 
-#Relay
-ORPort 9001
-ExitRelay 1
+# Relay
+# ORPort 9001
+# ExitRelay 1
 
-DirPort 8080
+# DirPort 8080
 
-ExitPolicy accept *:80        # HTTP
-ExitPolicy reject *:*
+# ExitPolicy accept *:80        # HTTP
+# ExitPolicy reject *:*
 
 #Contact
 ContactInfo changeme@localhost
