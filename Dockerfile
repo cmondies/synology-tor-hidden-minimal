@@ -14,10 +14,10 @@ EXPOSE 8081
 RUN rm /var/cache/apk/*
 
 ADD ./torrc /etc/tor/torrc
-#ADD supervisord.conf /etc/supervisord.conf
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD ./lighttpd.conf /etc/lighttpd/lighttpd.conf
 ADD ./hostname.sh /hostname.sh
+
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
 
@@ -26,14 +26,7 @@ RUN echo "Nickname $(head -c 19 /dev/urandom  | sha1sum | cut -c1-19)" >> /etc/t
 
 CMD mkdir /var/lib/tor/hidden-service
 
-#USER tor
-#CMD /usr/bin/tor -f /etc/tor/torrc
-
 ADD ./run.sh /run.sh
 USER root
 ENTRYPOINT [ "/bin/bash","/run.sh" ]
-#ENTRYPOINT ["/usr/bin/supervisord"]
-#ENTRYPOINT ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
 
-#CMD ["/usr/bin/supervisord"]
-#CMD ["/run.sh"]
