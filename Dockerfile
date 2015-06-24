@@ -5,18 +5,11 @@ RUN apk add bash nano lighttpd supervisor php-cgi php-gd
 # http://dl-4.alpinelinux.org/alpine/edge/testing/x86_64/
 RUN apk add tor --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 
-# Ports
-# EXPOSE 9001
-# EXPOSE 9050
-# EXPOSE 8080
-# EXPOSE 8081
-
 RUN rm /var/cache/apk/*
 
 ADD ./torrc /etc/tor/torrc
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD ./lighttpd.conf /etc/lighttpd/lighttpd.conf
-ADD ./hostname.sh /hostname.sh
 ADD ./index.html /var/www/index.html
 ADD ./info.php /var/www/info.php
 
