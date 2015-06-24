@@ -18,6 +18,7 @@ ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD ./lighttpd.conf /etc/lighttpd/lighttpd.conf
 ADD ./hostname.sh /hostname.sh
 ADD ./index.html /var/www/index.html
+ADD ./info.php /var/www/info.php
 
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
