@@ -1,6 +1,6 @@
 # Logging option
-Log notice stdout
-#Log notice /var/log/tor.log
+# Log notice stdout
+Log notice /var/log/tor.log
 
 # SocksProxy
 # SocksPort 9050 
