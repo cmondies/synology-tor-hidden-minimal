@@ -2,7 +2,7 @@ FROM alpine:latest
 RUN apk update
 
 # Adding bash, lighttpd, ...
-RUN apk add bash nano lighttpd supervisor php-cgi php-gd
+RUN apk add bash nano lighttpd supervisor
 
 # Alpine Linux package management : 
 # http://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management
